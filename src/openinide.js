@@ -216,10 +216,10 @@
             // IntelliJ REST API!
             // http://develar.org/idea-rest-api/
             //
-            let ideOpenUrl = intellijServer + '/api/file?file=' + encodeURI(fileString);
+            let ideOpenUrl = intellijServer + '/api/file/' + encodeURI(fileString);
 
             if (lineNumber) {
-                ideOpenUrl += '&line=' + lineNumber;
+                ideOpenUrl += '?line=' + lineNumber;
             }
 
             readURLContent(ideOpenUrl, thisServer, filePath, hasRootPath, url, lineNumber);
